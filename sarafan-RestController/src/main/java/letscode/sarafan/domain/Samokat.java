@@ -1,14 +1,16 @@
 package letscode.sarafan.domain;
 
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Table
-@ToString(of = {"id", "text"})
+@Builder
 @EqualsAndHashCode(of = {"id"})
 public class Samokat {
 
@@ -20,6 +22,23 @@ public class Samokat {
     private String seat;
     private String color;
     private String price;
+
+    public Samokat(Long id, String name_samokat, String speed, String seat, String color, String price) {
+        this.id = id;
+        this.name_samokat = name_samokat;
+        this.speed = speed;
+        this.seat = seat;
+        this.color = color;
+        this.price = price;
+    }
+
+    public Samokat() {
+
+    }
+
+    public Samokat(String name_samokat) {
+        this.name_samokat=name_samokat;
+    }
 
 
     public String getSeat() {
@@ -52,15 +71,6 @@ public class Samokat {
 
     public void setSpeed(String speed) {
         this.speed = speed;
-    }
-
-    public Samokat(Long id, String name_samokat) {
-        this.id = id;
-        this.name_samokat = name_samokat;
-    }
-
-    public Samokat() {
-
     }
 
     public Long getId() {

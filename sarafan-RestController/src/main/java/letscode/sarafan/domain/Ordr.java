@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-@ToString(of = {"id", "text"})
+//@ToString(of = {"id", "text"})
 @EqualsAndHashCode(of = {"id"})
 public class Ordr {
     @Id

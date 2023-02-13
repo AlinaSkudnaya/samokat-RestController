@@ -43,7 +43,7 @@ public class ZayavkaController  {
     @PutMapping("{id}")
     public Zvk updateSamokat(
             @PathVariable("id") Zvk samokatFromDB,
-            @RequestBody Arnd zvk)
+            @RequestBody Zvk zvk)
     {
 
         BeanUtils.copyProperties(zvk,samokatFromDB,"id");

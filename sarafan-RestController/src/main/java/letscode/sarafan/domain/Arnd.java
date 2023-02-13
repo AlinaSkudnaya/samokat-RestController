@@ -1,5 +1,6 @@
 package letscode.sarafan.domain;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -7,7 +8,6 @@ import javax.persistence.*;
 
 @Entity
 @Table
-@ToString(of = {"id", "text"})
 @EqualsAndHashCode(of = {"id"})
 public class Arnd {
     @Id

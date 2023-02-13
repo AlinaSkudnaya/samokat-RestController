@@ -1,5 +1,6 @@
 package letscode.sarafan.domain;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
-@ToString(of = {"id", "text"})
+@Builder
 @EqualsAndHashCode(of = {"id"})
 public class Zvk {
     @Id
@@ -18,6 +19,10 @@ public class Zvk {
 
     public Zvk() {
 
+    }
+
+    public Zvk(String name) {
+        this.name=name;
     }
 
     public Long getId() {
