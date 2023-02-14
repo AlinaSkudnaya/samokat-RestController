@@ -1,4 +1,4 @@
-package letscode.sarafan.exceptions;
+package Alina.sarafan.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

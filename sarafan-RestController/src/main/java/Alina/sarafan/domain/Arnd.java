@@ -1,4 +1,4 @@
-package letscode.sarafan.domain;
+package Alina.sarafan.domain;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

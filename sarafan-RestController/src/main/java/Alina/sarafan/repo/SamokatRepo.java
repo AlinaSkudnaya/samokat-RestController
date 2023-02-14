@@ -1,6 +1,6 @@
-package letscode.sarafan.repo;
+package Alina.sarafan.repo;
 
-import letscode.sarafan.domain.Samokat;
+import Alina.sarafan.domain.Samokat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SamokatRepo extends JpaRepository<Samokat,Long> {

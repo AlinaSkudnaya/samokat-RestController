@@ -1,7 +1,7 @@
-package letscode.sarafan.controller;
+package Alina.sarafan.controller;
 
-import letscode.sarafan.domain.Samokat;
-import letscode.sarafan.repo.SamokatRepo;
+import Alina.sarafan.repo.SamokatRepo;
+import Alina.sarafan.domain.Samokat;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,11 +25,11 @@ public class SamokatController {
     }
     
 
-    @GetMapping("{id}")
-    public Samokat getOneSamokat(@PathVariable("id") Samokat samokat)
-    {
-        return samokat;
-    }
+//    @GetMapping("{id}")
+//    public Samokat getOneSamokat(@PathVariable("id") Samokat samokat)
+//    {
+//        return samokat;
+//    }
 
     @PostMapping
     public Samokat createSamokat(

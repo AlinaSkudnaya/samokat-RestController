@@ -1,8 +1,7 @@
-package letscode.sarafan.controller;
+package Alina.sarafan.controller;
 
-import letscode.sarafan.domain.Ordr;
-import letscode.sarafan.domain.Samokat;
-import letscode.sarafan.repo.OrderRepo;
+import Alina.sarafan.domain.Ordr;
+import Alina.sarafan.repo.OrderRepo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,11 +24,11 @@ public class OrderController {
     }
 
 
-    @GetMapping("{id}")
-    public Ordr getOneSamokat(@PathVariable("id") Ordr order)
-    {
-        return order;
-    }
+//    @GetMapping("{id}")
+//    public Ordr getOneSamokat(@PathVariable("id") Ordr order)
+//    {
+//        return order;
+//    }
 
     @PostMapping
     public Ordr createSamokat(

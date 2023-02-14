@@ -1,4 +1,4 @@
-package letscode.sarafan;
+package Alina.sarafan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,8 @@
-package letscode.sarafan.Conrollers;
+package Alina.sarafan.Conrollers;
 
+import Alina.sarafan.domain.Zvk;
+import Alina.sarafan.repo.ZayavkaRepo;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import letscode.sarafan.domain.Samokat;
-import letscode.sarafan.domain.Zvk;
-import letscode.sarafan.repo.SamokatRepo;
-import letscode.sarafan.repo.ZayavkaRepo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -16,6 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -94,4 +93,13 @@ public class ZayavkaControllerTest {
                 .andExpect(content().json(objectMapper.writeValueAsString(p1)));
     }
 
+    @Test
+    public void givenId_whenEmpty() throws Exception {
+        Mockito.when(repository.findById(Mockito.any())).
+                thenReturn(Optional.empty());
+        mockMvc.perform(
+                        get("/Zayava"))
+                .andExpect(status().isNotFound())
+                .andExpect(mvcResult -> mvcResult.getResolvedException().getClass().equals(EntityNotFoundException.class));
+    }
 }

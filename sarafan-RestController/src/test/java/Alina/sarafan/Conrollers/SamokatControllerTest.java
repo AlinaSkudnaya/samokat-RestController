@@ -1,43 +1,25 @@
-package letscode.sarafan.Conrollers;
+package Alina.sarafan.Conrollers;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import letscode.sarafan.controller.SamokatController;
-import letscode.sarafan.domain.Samokat;
-import letscode.sarafan.repo.SamokatRepo;
-import lombok.var;
+import Alina.sarafan.domain.Samokat;
+import Alina.sarafan.repo.SamokatRepo;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.exceptions.base.MockitoException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.ResultMatcher;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.*;
 
 import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.willDoNothing;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -104,7 +86,7 @@ public class SamokatControllerTest {
 
 
     @Test
-    public void givenPerson_whenAdd_thenStatus201andPersonReturned() throws Exception {
+    public void add_samokat() throws Exception {
         Samokat p1 = new Samokat(111L, "Jane","fre", "fre","fre","fre");
         Mockito.when(repository.save(Mockito.any())).thenReturn(p1);
         mockMvc.perform(

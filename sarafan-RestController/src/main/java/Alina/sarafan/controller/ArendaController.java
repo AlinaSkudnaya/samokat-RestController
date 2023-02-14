@@ -1,15 +1,15 @@
-package letscode.sarafan.controller;
+package Alina.sarafan.controller;
 
 
-import letscode.sarafan.domain.Arnd;
-import letscode.sarafan.repo.ArendaRepo;
+import Alina.sarafan.repo.ArendaRepo;
+import Alina.sarafan.domain.Arnd;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController   //для реста
-@RequestMapping("Ar") //по этому адресу будет направляться к этому контроллеру
+@RequestMapping("Arenda") //по этому адресу будет направляться к этому контроллеру
 public class ArendaController {
 
     private final ArendaRepo arendarepo;

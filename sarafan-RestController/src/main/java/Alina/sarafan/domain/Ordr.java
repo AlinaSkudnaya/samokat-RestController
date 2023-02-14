@@ -1,15 +1,13 @@
-package letscode.sarafan.domain;
+package Alina.sarafan.domain;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Table
 @Builder
-//@ToString(of = {"id", "text"})
 @EqualsAndHashCode(of = {"id"})
 public class Ordr {
     @Id

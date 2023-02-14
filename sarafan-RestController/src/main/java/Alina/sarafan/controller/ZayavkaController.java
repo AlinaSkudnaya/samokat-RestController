@@ -1,10 +1,8 @@
-package letscode.sarafan.controller;
+package Alina.sarafan.controller;
 
 
-import letscode.sarafan.domain.Arnd;
-
-import letscode.sarafan.domain.Zvk;
-import letscode.sarafan.repo.ZayavkaRepo;
+import Alina.sarafan.domain.Zvk;
+import Alina.sarafan.repo.ZayavkaRepo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,11 +26,11 @@ public class ZayavkaController  {
     }
 
 
-    @GetMapping("{id}")
-    public Zvk getOneSamokat(@PathVariable("id") Zvk zvk)
-    {
-        return zvk;
-    }
+//    @GetMapping("{id}")
+//    public Zvk getOneSamokat(@PathVariable("id") Zvk zvk)
+//    {
+//        return zvk;
+//    }
 
     @PostMapping
     public Zvk createSamokat(
