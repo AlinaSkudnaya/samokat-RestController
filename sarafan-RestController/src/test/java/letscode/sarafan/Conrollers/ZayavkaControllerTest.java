@@ -71,7 +71,7 @@ public class ZayavkaControllerTest {
         Mockito.when(repository.findById(Mockito.any())).thenReturn(Optional.of(p1));
         mockMvc.perform(
                         put("/Zayavka/111")
-                                .content(objectMapper.writeValueAsString(new Zvk(111L, "Jane","fre")))
+                                .content(objectMapper.writeValueAsString(new Zvk(111L, "Jake","fre")))
                                 .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())

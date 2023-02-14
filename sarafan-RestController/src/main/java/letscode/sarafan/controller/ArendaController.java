@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController   //для реста
-@RequestMapping("Arenda") //по этому адресу будет направляться к этому контроллеру
+@RequestMapping("Ar") //по этому адресу будет направляться к этому контроллеру
 public class ArendaController {
 
     private final ArendaRepo arendarepo;

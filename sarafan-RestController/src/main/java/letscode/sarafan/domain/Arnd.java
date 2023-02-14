@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table
+@Builder
 @EqualsAndHashCode(of = {"id"})
 public class Arnd {
     @Id
